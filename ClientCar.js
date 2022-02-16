@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 3000;
 
 const url = 'https://voitur.herokuapp.com/?wsdl';
 const soap = require('soap');
