@@ -10,6 +10,6 @@
     "soap": "^0.43.0"
   },
   "scripts": {
-    "start": "node ./ClientCar.js"x
+    "start": "node ./ClientCar.js"
   }
 }
