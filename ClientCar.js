@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 8080;
 
-const url = 'http://127.0.0.1:8008/?wsdl';
+const url = 'https://voitur.herokuapp.com/?wsdl';
 const soap = require('soap');
 
 let getList = () => {
@@ -20,7 +20,7 @@ let getList = () => {
 
 app.get('/', (req, res) => {
     let list = getList();
-
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     let test = list.then(value => {
         let j = JSON.parse(value['displayListCarResult'])
         console.log(j)
