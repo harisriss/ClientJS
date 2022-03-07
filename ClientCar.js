@@ -21,7 +21,6 @@ let getList = () => {
 
 app.get('/', (req, res) => {
     let list = getList();
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     let test = list.then(value => {
         let j = JSON.parse(value['displayListCarResult'])
         console.log(j)
