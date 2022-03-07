@@ -4,7 +4,8 @@ const port = process.env.PORT || 3000;
 
 const url = 'https://voitur.herokuapp.com/?wsdl';
 const soap = require('soap');
-
+const cors = require("cors");
+app.use(cors())
 let getList = () => {
     let args = {};
 
